@@ -41,8 +41,7 @@ def evaluate_result_game(x:, y:)
   end
 end
 
-def part1
-  file         = File.open("../../inputs/02/input.txt")
+def total_score(file:)
   total_points = 0
 
   file.readlines.each do |line|
@@ -60,8 +59,7 @@ end
 # X means you need to lose,
 # Y means you need to end the round in a draw, and
 # Z means you need to win
-def part2
-  file         = File.open("../../inputs/02/input.txt")
+def total_score_new_logic(file:)
   total_points = 0
 
   file.readlines.each do |line|
@@ -85,5 +83,5 @@ def part2
   total_points
 end
 
-puts part1
-puts part2
+# puts part1(file: File.open("../inputs/day_2.txt"))
+# puts part2(file: File.open("../inputs/day_2.txt"))

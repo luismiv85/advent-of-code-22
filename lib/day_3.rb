@@ -1,6 +1,3 @@
-require "byebug"
-require "set"
-
 def is_upcase?(character:)
   character.upcase == character
 end
@@ -22,8 +19,7 @@ def find_a_common_character(array)
   union.join
 end
 
-def part1
-  file           = File.open("../../inputs/03/input.txt")
+def sum_priorities_item_types(file:)
   sum_priorities = 0
 
   file.readlines.each do |line|
@@ -41,8 +37,7 @@ def part1
   sum_priorities
 end
 
-def part2
-  file            = File.open("../../inputs/03/input.txt")
+def sum_group_priorities_item_types(file:)
   sum_priorities  = 0
   group           = 1
   group_rucksacks = []
@@ -64,5 +59,5 @@ def part2
   sum_priorities
 end
 
-puts part1
-puts part2
+# puts sum_priorities_item_types(file: File.open("../inputs/day_3.txt"))
+# puts sum_group_priorities_item_types(file: File.open("../inputs/day_3.txt"))

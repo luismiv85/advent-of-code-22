@@ -1,8 +1,9 @@
-def part1
-  file = File.open("../../inputs/01/input.txt")
+require 'byebug'
 
+def max_calories(file:)
   max = 0
   counter = 0
+
   file.readlines.each do |line|
     calorie = line.chomp
 
@@ -14,12 +15,13 @@ def part1
     end
   end
 
-  puts max
+  # Last lines
+  max = counter if counter > max
+
+  max
 end
 
-def part2
-  file = File.open("../../inputs/01/input.txt")
-
+def sum_top_3_calories(file:)
   array = []
   counter = 0
 
@@ -34,8 +36,11 @@ def part2
     end
   end
 
+  # Last lines
+  array << counter if counter > 0
+
   array.sort.reverse.take(3).sum
 end
 
-puts part1
-puts part2
+# puts part1(file: File.open("../inputs/day_1.txt"))
+# puts part2(file: File.open("../inputs/day_1.txt"))
