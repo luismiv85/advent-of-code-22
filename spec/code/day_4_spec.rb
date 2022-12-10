@@ -11,7 +11,7 @@ RSpec.describe 'Day 4' do
     end
   end
 
-  describe '' do
+  describe 'pairs_overlap' do
     it 'should return how many assignment pairs do the ranges overlap' do
       file = File.open(ROOT_PATH.join 'inputs', 'day_4.txt')
 
